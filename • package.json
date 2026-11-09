@@ -1,0 +1,10 @@
+{
+  "name": "mega-scale-content-engine",
+  "version": "1.0.0",
+  "description": "Massive automated content engine for Vishal Nayak",
+  "main": "generate.js",
+  "scripts": {
+    "start": "node generate.js"
+  },
+  "dependencies": {}
+}
