@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>US Freelance Tax & Hourly Salary Calculator (2026) - Mobiapp Systems</title>
+  <script async src="https://googlesyndication.com" crossorigin="anonymous"></script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; color: #1a202c; background: #f8fafc; margin: 0; padding: 20px; }
+    .container { max-width: 850px; margin: 0 auto; background: #ffffff; padding: 28px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    h1 { font-size: 1.9rem; color: #0f172a; margin-bottom: 8px; }
+    .subtitle { color: #475569; font-size: 1.05rem; margin-bottom: 24px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 24px; }
+    label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.95rem; }
+    input { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem; box-sizing: border-box; }
+    .results { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; background: #f1f5f9; padding: 20px; border-radius: 10px; margin-bottom: 30px; }
+    .card { padding: 14px; border-radius: 8px; background: #ffffff; border: 1px solid #e2e8f0; }
+    .card-title { font-size: 0.85rem; color: #64748b; margin-bottom: 4px; }
+    .card-val { font-size: 1.45rem; font-weight: bold; color: #0f172a; }
+    .green { color: #15803d; }
+    .red { color: #b91c1c; }
+    .blue { color: #1d4ed8; }
+    article { line-height: 1.75; color: #334155; }
+    h2 { color: #0f172a; margin-top: 24px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="/" style="color: #2563eb; text-decoration: none; font-weight: 600;">← Back to Home</a>
+    <h1>US Freelance Tax & Hourly Salary Calculator (2026)</h1>
+    <p class="subtitle">Calculate your annual gross income, 15.3% IRS self-employment tax, quarterly payments, and net take-home pay instantly.</p>
+
+    <div class="grid">
+      <div>
+        <label>Hourly Rate ($ USD)</label>
+        <input type="number" id="rate" value="50" oninput="calc()">
+      </div>
+      <div>
+        <label>Hours Per Week</label>
+        <input type="number" id="hours" value="40" oninput="calc()">
+      </div>
+      <div>
+        <label>Weeks Per Year</label>
+        <input type="number" id="weeks" value="50" oninput="calc()">
+      </div>
+      <div>
+        <label>Business Expenses ($)</label>
+        <input type="number" id="exp" value="5000" oninput="calc()">
+      </div>
+    </div>
+
+    <div class="results">
+      <div class="card"><div class="card-title">Annual Gross Income</div><div class="card-val blue" id="gross">$100,000</div></div>
+      <div class="card"><div class="card-title">Estimated Total Tax</div><div class="card-val red" id="tax">$19,733</div></div>
+      <div class="card"><div class="card-title">Net Take-Home Pay</div><div class="card-val green" id="net">$80,267</div></div>
+      <div class="card"><div class="card-title">Quarterly IRS Payment</div><div class="card-val" id="quarter">$4,933</div></div>
+    </div>
+
+    <article>
+      <h2>How US Freelance and Self-Employment Taxes Work in 2026</h2>
+      <p>Independent contractors, gig workers, and remote freelancers in the United States are responsible for calculating and paying their own taxes directly to the IRS. Unlike W-2 employees, self-employed professionals pay both the employer and employee portions of Social Security and Medicare taxes.</p>
+      <h2>1. Understanding the 15.3% Self-Employment Tax</h2>
+      <p>The IRS self-employment tax rate is 15.3% applied to 92.35% of your net business profit. This includes 12.4% for Social Security and 2.9% for Medicare. You can deduct half of your self-employment tax when calculating your federal adjusted gross income.</p>
+      <h2>2. Quarterly Estimated Tax Deadlines</h2>
+      <p>If you expect to owe $1,000 or more in federal taxes, the IRS requires quarterly payments in April, June, September, and January. Setting aside 25% to 30% of every client invoice into a high-yield savings account prevents year-end tax surprises.</p>
+    </article>
+  </div>
+
+  <script>
+    function calc() {
+      const rate = Number(document.getElementById('rate').value) || 0;
+      const hours = Number(document.getElementById('hours').value) || 0;
+      const weeks = Number(document.getElementById('weeks').value) || 0;
+      const exp = Number(document.getElementById('exp').value) || 0;
+
+      const gross = rate * hours * weeks;
+      const profit = Math.max(0, gross - exp);
+      const seTax = profit * 0.9235 * 0.153;
+      const fedTax = Math.max(0, (profit - (seTax * 0.5) - 14600) * 0.12);
+      const totalTax = seTax + fedTax;
+      const net = gross - totalTax;
+      const quarter = totalTax / 4;
+
+      document.getElementById('gross').innerText = '$' + Math.round(gross).toLocaleString();
+      document.getElementById('tax').innerText = '$' + Math.round(totalTax).toLocaleString();
+      document.getElementById('net').innerText = '$' + Math.round(net).toLocaleString();
+      document.getElementById('quarter').innerText = '$' + Math.round(quarter).toLocaleString();
+    }
+  </script>
+</body>
+</html>
