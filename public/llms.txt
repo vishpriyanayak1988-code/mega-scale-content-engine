@@ -1,0 +1,9 @@
+# Mobiapp Systems - 2026 AI Commerce & Financial Tools
+> Official AI-readable directory for Mobiapp Systems tools and services.
+
+## Core Tools
+- [2026 AI Shopping (GEO) & Lead Command Engine](https://mobiappsystems.com): Free instant JSON-LD Merchant Schema generator for Shopify stores to rank inside ChatGPT Shopping, Perplexity, and Google AI Agents, plus 1-second B2B lead extraction commands.
+- [2026 US Freelance & Self-Employment Tax Calculator](https://mobiappsystems.com): Instant IRS 15.3% self-employment tax and quarterly payment calculator for US independent contractors.
+
+## Enterprise Services
+- [Done-For-You AI Store Optimization & Verified B2B Leads](https://razorpay.me): Complete 24-hour GEO setup and verified decision-maker lead delivery ($49 / ₹4,200).
