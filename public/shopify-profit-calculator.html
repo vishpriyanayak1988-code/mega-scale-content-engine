@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026 Shopify Profit Margin & Ad ROAS Calculator - Mobiapp Systems</title>
+  <meta name="description" content="Free 2026 Shopify Profit Margin, Payment Fee & Break-Even ROAS Calculator for e-commerce store owners.">
+  <script async src="https://googlesyndication.com" crossorigin="anonymous"></script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 20px; }
+    .container { max-width: 780px; margin: 0 auto; background: #1e293b; padding: 30px; border-radius: 16px; border: 1px solid #334155; }
+    h1 { color: #ffffff; font-size: 1.8rem; margin-top: 0; }
+    label { display: block; font-weight: 600; margin-bottom: 6px; color: #cbd5e1; }
+    input { width: 100%; padding: 12px; border: 1px solid #475569; background: #0f172a; color: #ffffff; border-radius: 8px; font-size: 1rem; margin-bottom: 16px; box-sizing: border-box; }
+    .btn { background: #22c55e; color: #052e16; border: none; padding: 14px 24px; border-radius: 8px; font-size: 1rem; font-weight: bold; cursor: pointer; width: 100%; }
+    .result { display: none; margin-top: 20px; background: #0f172a; padding: 20px; border-radius: 10px; border-left: 4px solid #3b82f6; }
+    .promo { background: #1d4ed8; padding: 20px; border-radius: 12px; margin-top: 24px; text-align: center; }
+    .promo a { display: inline-block; background: #facc15; color: #0f172a; font-weight: bold; padding: 12px 24px; border-radius: 8px; text-decoration: none; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="/" style="color: #60a5fa; text-decoration: none;">← Back to Mobiapp Systems</a><br><br>
+    <h1>2026 Shopify Profit Margin & Break-Even ROAS Calculator</h1>
+    <p style="color:#94a3b8;">Calculate your exact net profit per order after product cost, shipping, and Shopify payment gateway fees.</p>
+
+    <label>Product Selling Price ($)</label>
+    <input type="number" id="price" placeholder="e.g. 60">
+    <label>Product Cost + Shipping ($)</label>
+    <input type="number" id="cost" placeholder="e.g. 22">
+    <label>Ad Spend Per Order / CPA ($)</label>
+    <input type="number" id="ads" placeholder="e.g. 15">
+    <button class="btn" onclick="calcProfit()">Calculate Net Profit & ROAS →</button>
+
+    <div id="out" class="result">
+      <h3 style="margin-top:0; color:#4ade80;">Your Store Profit Breakdown:</h3>
+      <p id="resText" style="font-size:1.1rem; margin:0;"></p>
+    </div>
+
+    <div class="promo">
+      <h3 style="margin:0;">Want Free Organic Sales Without Paid Ads?</h3>
+      <p style="margin:8px 0 0 0; color:#dbeafe;">Make your Shopify store visible inside ChatGPT & Perplexity Shopping in 5 seconds.</p>
+      <a href="/ai-geo-lead-engine.html">Generate Free AI Shopping Code →</a>
+    </div>
+  </div>
+
+  <script>
+    function calcProfit() {
+      const p = parseFloat(document.getElementById('price').value) || 0;
+      const c = parseFloat(document.getElementById('cost').value) || 0;
+      const a = parseFloat(document.getElementById('ads').value) || 0;
+      const fee = (p * 0.029) + 0.30;
+      const net = p - c - a - fee;
+      const margin = p > 0 ? ((net / p) * 100).toFixed(1) : 0;
+      const beRoas = (p - c - fee) > 0 ? (p / (p - c - fee)).toFixed(2) : 'N/A';
+      document.getElementById('resText').innerHTML = `<strong>Net Profit Per Order:</strong> $${net.toFixed(2)} (${margin}% Margin)<br><strong>Gateway Fee (2.9% + $0.30):</strong> $${fee.toFixed(2)}<br><strong>Break-Even Ad ROAS:</strong> ${beRoas}x`;
+      document.getElementById('out').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
