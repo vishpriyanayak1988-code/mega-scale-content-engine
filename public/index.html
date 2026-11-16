@@ -170,10 +170,13 @@
   </footer>
 </body>
 <script>
+const u = 'https://razorpay.me@' + 'vishalsatishnayak';
 document.querySelectorAll('.pay-btn').forEach(b => {
-  b.insertAdjacentHTML('afterend', '<a href="https://razorpay.me/@vishalsatishnayak" target="_blank" class="btn" style="margin-top:10px;display:block">Razorpay / Cards &rarr;</a>');
+  b.insertAdjacentHTML('afterend', `<a href="${u}" target="_blank" class="btn" style="margin-top:10px;display:block">Razorpay / Cards &rarr;</a>`);
 });
 </script>
+
+
 
 
 
