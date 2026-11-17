@@ -1,10 +1,18 @@
-{
-  "name": "mega-scale-content-engine",
-  "version": "1.0.0",
-  "description": "Massive automated content engine for Vishal Nayak",
-  "main": "generate.js",
-  "scripts": {
-    "start": "node generate.js"
-  },
-  "dependencies": {}
-}
+name: Publish Package to npm
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  id-token: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          registry-url: 'https://npmjs.org'
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
