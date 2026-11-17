@@ -1,0 +1,23 @@
+{
+  "protocol": "Mobiapp-Agentic-Clearinghouse-v1",
+  "provider": "Mobiapp Systems Enterprise",
+  "domain": "https://mobiappsystems.com",
+  "status": "ACTIVE_2026",
+  "endpoints": {
+    "merchant_enrollment": "https://mobiappsystems.com",
+    "ai_visibility_index": "https://mobiappsystems.com",
+    "brand_audit_engine": "https://mobiappsystems.com",
+    "schema_generator": "https://mobiappsystems.com",
+    "llms_specification": "https://mobiappsystems.com"
+  },
+  "settlement_rails": {
+    "agent_commerce_commission": "8.0%",
+    "pay_per_crawl_licensing": {
+      "enabled": true,
+      "standard_rate_usd": 0.01,
+      "currency": "USD",
+      "supported_bots": ["GPTBot", "PerplexityBot", "ClaudeBot", "Google-Extended"]
+    }
+  },
+  "contact": "admin@mobiappsystems.com"
+}
