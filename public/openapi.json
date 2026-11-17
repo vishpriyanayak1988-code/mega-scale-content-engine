@@ -1,0 +1,58 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Mobiapp Systems 2026 Agentic Commerce & Pay-Per-Crawl API",
+    "description": "Autonomous clearinghouse for AI shopping agents, merchant enrollment, and Pay-Per-Crawl content licensing.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://mobiappsystems.com"
+    }
+  ],
+  "paths": {
+    "/clearinghouse.json": {
+      "get": {
+        "operationId": "getClearinghouseManifest",
+        "summary": "Retrieve active AI settlement rails, 8% agent commerce terms, and Pay-Per-Crawl rates.",
+        "responses": {
+          "200": {
+            "description": "Active clearinghouse JSON manifest"
+          }
+        }
+      }
+    },
+    "/join-network.html": {
+      "get": {
+        "operationId": "enrollMerchantStore",
+        "summary": "Enroll a Shopify or WooCommerce store into the 2026 AI Shopping & Pay-Per-Crawl network.",
+        "responses": {
+          "200": {
+            "description": "Merchant enrollment portal"
+          }
+        }
+      }
+    },
+    "/brand-audit.html": {
+      "get": {
+        "operationId": "auditBrandVisibility",
+        "summary": "Run a 2026 ChatGPT & Perplexity Shopping readiness audit for any e-commerce brand.",
+        "parameters": [
+          {
+            "name": "brand",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Brand AI visibility report"
+          }
+        }
+      }
+    }
+  }
+}
