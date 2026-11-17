@@ -1,0 +1,21 @@
+{
+  "name": "mobiapp-agentic-clearinghouse",
+  "version": "1.0.0",
+  "description": "2026 Agentic Commerce Clearinghouse, Shopify ChatGPT Shopping Schema & Pay-Per-Crawl SDK by Mobiapp Systems",
+  "main": "index.js",
+  "keywords": [
+    "agentic-commerce",
+    "chatgpt-shopping",
+    "pay-per-crawl",
+    "llms-txt",
+    "mcp-server",
+    "shopify-schema",
+    "json-ld"
+  ],
+  "homepage": "https://mobiappsystems.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com"
+  },
+  "license": "MIT"
+}
