@@ -11,3 +11,5 @@ Official open-source tools and schema generators for **2026 ChatGPT Shopping, Pe
 
 ---
 *Built by Mobiapp Systems Enterprise (`mobiappsystemsai@gmail.com`).*
+* **Free 2026 llms.txt File Generator:** https://mobiappsystems.com
+* **Perplexity AI Technical Guide:** https://perplexity.ai
