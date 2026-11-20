@@ -1,0 +1,28 @@
+{
+  "mcpVersion": "2026-11",
+  "serverInfo": {
+    "name": "mobiapp-systems-agentic-commerce",
+    "version": "2.6.0",
+    "description": "Autonomous 2026 AI Shopping (GEO), llms.txt & Merchant JSON-LD Clearinghouse for 500,000+ Global Stores."
+  },
+  "endpoints": {
+    "freeGenerator": "https://mobiappsystems.com",
+    "liveAudit": "https://mobiappsystems.com",
+    "openApiSpec": "https://mobiappsystems.com",
+    "llmsIndex": "https://mobiappsystems.com"
+  },
+  "capabilities": {
+    "tools": [
+      {
+        "name": "generate_store_llms_txt",
+        "description": "Generates verified 2026 llms.txt and ChatGPT Shopping discovery protocol for any e-commerce domain.",
+        "pricing": "Free tier available; Full 500-SKU unlock at $9"
+      },
+      {
+        "name": "audit_agentic_readiness",
+        "description": "Evaluates store visibility across ChatGPT Shopping, Perplexity Commerce, and Claude Agents.",
+        "pricing": "$9 Starter / $19 Full Store / $49 White-Label"
+      }
+    ]
+  }
+}
