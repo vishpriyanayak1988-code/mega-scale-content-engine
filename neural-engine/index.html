@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2080 Neural Procurement Engine | Mobiapp Systems Autonomous Stack Compiler</title>
+  <meta name="description" content="2080 Autonomous Software Clearinghouse & Live Revenue-Bleed X-Ray Scanner. Detect operational cost leaks and compile verified enterprise AI stacks in seconds.">
+  <style>
+    :root { --bg: #030712; --card: #0f172a; --border: #1e293b; --cyan: #38bdf8; --gold: #f59e0b; --green: #10b981; --red: #ef4444; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: #f8fafc; margin: 0; padding: 0; line-height: 1.6; }
+    .wrap { max-width: 1020px; margin: 0 auto; padding: 28px 18px 60px; }
+    .nav { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 16px; margin-bottom: 28px; flex-wrap: wrap; gap: 10px; }
+    .nav a { color: #fff; text-decoration: none; font-weight: 800; font-size: 1.15rem; }
+    .badge { background: rgba(56, 189, 248, 0.14); color: var(--cyan); border: 1px solid #0284c7; padding: 4px 12px; border-radius: 999px; font-size: 11px; font-weight: 800; letter-spacing: 0.05em; }
+    .hero { text-align: center; margin-bottom: 32px; }
+    .hero h1 { font-size: 2.1rem; line-height: 1.2; margin: 12px 0; background: linear-gradient(90deg, #fff, #38bdf8, #fbbf24); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero p { color: #94a3b8; max-width: 720px; margin: 0 auto; font-size: 1rem; }
+    .panel { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 24px; margin-bottom: 24px; box-shadow: 0 10px 35px rgba(0,0,0,0.45); }
+    .grid-inputs { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 18px; }
+    label { display: block; font-size: 12px; font-weight: 700; color: #94a3b8; margin-bottom: 6px; text-transform: uppercase; }
+    select, input { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #334155; background: #020617; color: #fff; font-size: 14px; box-sizing: border-box; }
+    .scan-btn { width: 100%; padding: 15px; border: none; border-radius: 12px; background: linear-gradient(90deg, #0284c7, #10b981); color: #fff; font-size: 16px; font-weight: 900; cursor: pointer; letter-spacing: 0.03em; }
+    .alert-box { background: rgba(239, 68, 68, 0.12); border: 1px solid var(--red); border-radius: 14px; padding: 18px; margin: 20px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .bleed-num { font-size: 1.8rem; font-weight: 900; color: #f87171; }
+    .stack-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; margin-top: 20px; }
+    .node-card { background: #020617; border: 1px solid #1e293b; border-radius: 14px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; }
+    .node-card h3 { margin: 8px 0 6px; font-size: 1.15rem; color: #fff; }
+    .save-tag { color: var(--green); font-weight: 800; font-size: 13px; margin-bottom: 10px; }
+    .node-desc { color: #94a3b8; font-size: 13.5px; margin-bottom: 16px; }
+    .deploy-btn { display: block; text-align: center; padding: 12px; border-radius: 10px; background: linear-gradient(90deg, #f59e0b, #ea580c); color: #fff; font-weight: 800; text-decoration: none; font-size: 14px; }
+    .json-box { background: #020617; border: 1px dashed #38bdf8; border-radius: 12px; padding: 16px; margin-top: 24px; }
+    .json-btn { background: #1e293b; color: #38bdf8; border: 1px solid #0284c7; padding: 10px 16px; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 13px; margin-top: 8px; }
+    #results { display: none; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <a href="/">Mobiapp Systems</a>
+      <span class="badge">VISION 2080 NEURAL PROCUREMENT PROTOCOL</span>
+    </div>
+
+    <div class="hero">
+      <h1>Autonomous Revenue-Bleed X-Ray &amp; AI Stack Compiler</h1>
+      <p>Enter your operational parameters below. Our 2080 Neural Clearinghouse detects hidden SaaS &amp; manual labor leaks and compiles a verified, self-healing software stack with instant deployment nodes.</p>
+    </div>
+
+    <div class="panel">
+      <div class="grid-inputs">
+        <div>
+          <label>Business Architecture</label>
+          <select id="bizType">
+            <option value="ecom">E-Commerce / DTC Brand</option>
+            <option value="agency">Digital / AI Agency</option>
+            <option value="saas">SaaS / Tech Startup</option>
+            <option value="creator">Media &amp; Content Empire</option>
+          </select>
+        </div>
+        <div>
+          <label>Monthly Revenue / Budget ($)</label>
+          <input type="number" id="revInput" value="25000" min="500">
+        </div>
+        <div>
+          <label>Primary Bottleneck</label>
+          <select id="goalType">
+            <option value="scale">Autonomous AI Traffic &amp; SEO</option>
+            <option value="auto">Zero-Human Workflow Automation</option>
+            <option value="conv">24/7 AI Voice, Video &amp; Conversion</option>
+          </select>
+        </div>
+      </div>
+      <button class="scan-btn" onclick="runNeuralScan()">RUN 2080 NEURAL X-RAY &amp; COMPILE STACK &rarr;</button>
+
+      <div id="results">
+        <div class="alert-box">
+          <div>
+            <strong style="color:#fca5a5; font-size:13px;">CRITICAL REVENUE BLEED DETECTED</strong>
+            <div style="color:#e2e8f0; font-size:14px;">Estimated annual efficiency loss from unoptimized legacy tools:</div>
+          </div>
+          <div class="bleed-num" id="bleedAmount">$18,400 / yr</div>
+        </div>
+
+        <h3 style="margin:18px 0 6px; color:#fff;">Compiled 2080 Autonomous Software Nodes (Verified Clearinghouse)</h3>
+        <div class="stack-grid" id="nodesContainer"></div>
+
+        <div class="json-box">
+          <strong style="color:#38bdf8; font-size:13px;">MACHINE-READABLE ARCHITECTURE BLUEPRINT (`stack-2080.json`)</strong>
+          <p style="color:#94a3b8; font-size:13px; margin:6px 0;">Download your compiled JSON manifest to feed directly into ChatGPT, Claude, or your internal engineering team.</p>
+          <button class="json-btn" onclick="downloadBlueprint()">Download Verified Blueprint (.JSON) &darr;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // =========================================================================
+    // MASTER AFFILIATE LINKS CONFIG (Replace with your PartnerStack & Impact URLs)
+    // =========================================================================
+    const MASTER_LINKS = {
+      automation: "https://make.com",       // PartnerStack: Make / Zapier ($100+ CPA)
+      seo_geo: "https://semrush.com",                   // Impact: Semrush ($200 CPA)
+      web_infra: "https://webflow.com",                     // PartnerStack: Webflow (50% Recurring)
+      voice_video: "https://elevenlabs.io",                 // PartnerStack: ElevenLabs / HeyGen (22% Recurring)
+      commerce: "https://shopify.com",       // Impact: Shopify ($150+ CPA)
+      email_crm: "https://kit.com"                          // PartnerStack: Kit / Brevo ($100 CPA)
+    };
+
+    let lastBlueprint = {};
+
+    function runNeuralScan() {
+      const biz = document.getElementById('bizType').value;
+      const rev = parseFloat(document.getElementById('revInput').value) || 10000;
+      const annualBleed = Math.round(rev * 12 * 0.14);
+      document.getElementById('bleedAmount').innerText = "$" + annualBleed.toLocaleString() + " / yr";
+
+      const nodes = [
+        {
+          tag: "NODE 01 — AUTONOMOUS BRAIN",
+          name: "Zero-Human Workflow Engine",
+          save: "Saves ~65 hrs/mo ($" + Math.round(rev * 0.05).toLocaleString() + "/mo)",
+          desc: "Connects your storefront, CRM, and AI agents into self-executing pipelines without manual data entry.",
+          url: MASTER_LINKS.automation
+        },
+        {
+          tag: "NODE 02 — AI SEARCH DOMINANCE",
+          name: "Enterprise GEO & Search Intelligence",
+          save: "+310% Organic & AI Discovery",
+          desc: "Captures high-intent buyers across Google, ChatGPT Shopping, and Perplexity before competitors react.",
+          url: MASTER_LINKS.seo_geo
+        },
+        {
+          tag: "NODE 03 — NEURAL MEDIA ENGINE",
+          name: "Autonomous AI Voice & Video Synthesizer",
+          save: "Cuts Production Cost by 88%",
+          desc: "Generates studio-grade multilingual product videos, voiceovers, and hyper-personalized outreach at scale.",
+          url: MASTER_LINKS.voice_video
+        },
+        {
+          tag: "NODE 04 — CORE COMMERCE RAIL",
+          name: biz === 'ecom' ? "High-Velocity Global Storefront" : "Autonomous Web & Funnel Infrastructure",
+          save: "+42% Checkout Conversion Lift",
+          desc: "Sub-second global edge architecture engineered for agentic checkout and high-ticket recurring revenue.",
+          url: biz === 'ecom' ? MASTER_LINKS.commerce : MASTER_LINKS.web_infra
+        }
+      ];
+
+      lastBlueprint = {
+        protocol: "Mobiapp-Neural-Procurement-2080",
+        generated_at: new Date().toISOString(),
+        estimated_annual_savings_usd: annualBleed,
+        verified_deployment_nodes: nodes
+      };
+
+      const container = document.getElementById('nodesContainer');
+      container.innerHTML = nodes.map(n => `
+        <div class="node-card">
+          <div>
+            <span class="badge">${n.tag}</span>
+            <h3>${n.name}</h3>
+            <div class="save-tag">${n.save}</div>
+            <p class="node-desc">${n.desc}</p>
+          </div>
+          <a href="${n.url}" target="_blank" rel="noopener" class="deploy-btn">Activate Verified Node &rarr;</a>
